@@ -9,7 +9,7 @@ from tg_bot import DEV_USERS, OWNER_ID, dispatcher
 from tg_bot.modules.disable import DisableAbleCommandHandler
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
-from telegram.ext import , run_async
+from telegram.ext import, CallbackQueryHandler, run_async
 
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
@@ -159,7 +159,7 @@ url = 'https://graphql.anilist.co'
 
 
 @run_async
-def airing(update: Update, context: ):
+def airing(update: Update, context: CallbackContext):
     message = update.effective_message
     search_str = message.text.split(' ', 1)
     if len(search_str) == 1:
@@ -183,7 +183,7 @@ def airing(update: Update, context: ):
 
 
 @run_async
-def anime(update: Update, context: ):
+def anime(update: Update, context: CallbackContext):
     message = update.effective_message
     search = message.text.split(' ', 1)
     if len(search) == 1:
