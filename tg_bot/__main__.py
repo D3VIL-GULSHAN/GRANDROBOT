@@ -34,7 +34,7 @@ You can find the list of available commands with /help.
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Tuturu! my name *{}*.
 
 *Main* commands available:
  - /start: start the bot
@@ -141,7 +141,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="🧑‍💻My Creator🧑‍💻",
+                                                                                   InlineKeyboardButton(text="🧑‍💻Support Group🧑‍💻",
                                                                        url="t.me/NatthanDrake")],
                                                                                    [InlineKeyboardButton(text="ADD MAYURI SHIINA TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
