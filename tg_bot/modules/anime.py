@@ -159,7 +159,7 @@ url = 'https://graphql.anilist.co'
 
 
 @run_async
-def airing(update: Update, context: CallbackContext):
+def airing(update: Update, context: ):
     message = update.effective_message
     search_str = message.text.split(' ', 1)
     if len(search_str) == 1:
@@ -183,7 +183,7 @@ def airing(update: Update, context: CallbackContext):
 
 
 @run_async
-def anime(update: Update, context: CallbackContext):
+def anime(update: Update, context: ):
     message = update.effective_message
     search = message.text.split(' ', 1)
     if len(search) == 1:
